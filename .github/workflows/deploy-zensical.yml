@@ -80,7 +80,10 @@ jobs:
           uv run zensical build
 
       - name: D1b) Copy data directory into built site
-        run: cp -r data site/data
+        run: |
+          rm -rf site/data
+          mkdir -p site/data
+          cp -r data/. site/data/
 
       - name: D1c) Verify data files in site
         run: |

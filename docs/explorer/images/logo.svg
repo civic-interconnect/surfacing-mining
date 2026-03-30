@@ -1,0 +1,18 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- transparent background -->
+
+  <!-- white interior -->
+  <circle cx="128" cy="128" r="112" fill="#ffffff"></circle>
+
+  <!-- bold circle outline -->
+  <circle cx="128" cy="128" r="112" fill="none" stroke="#2f3437" stroke-width="12"></circle>
+
+  <!-- bold horizontal boundary -->
+  <line x1="36" y1="128" x2="220" y2="128" stroke="#2f3437" stroke-width="10" stroke-linecap="round"></line>
+
+  <!-- upper triangle (slightly right of center) -->
+  <polygon points="138,118 158,78 178,118" fill="#2f7f7a"></polygon>
+
+  <!-- lower triangle (slightly left of center, inverted) -->
+  <polygon points="78,138 98,178 118,138" fill="#b66a3c"></polygon>
+</svg>
