@@ -4,8 +4,8 @@
 
 // Base path for project geospatial data, relative to the explorer's serving root.
 // If serving from repo root: "/data/projects/"
-// If serving from docs/explorer/: "../../data/projects/"
-const DATA_BASE_PATH = "../../data/projects/";
+// If serving from docs/explorer/: "../data/projects/"
+const DATA_BASE_PATH = "../data/projects/";
 
 // ---------------------------------------------------------------------------
 // Layer style definitions
