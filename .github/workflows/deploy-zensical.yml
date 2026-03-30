@@ -82,6 +82,12 @@ jobs:
       - name: D1b) Copy data directory into built site
         run: cp -r data site/data
 
+      - name: D1c) Verify data files in site
+        run: |
+          echo "GeoJSON files in site/data:"
+          find site/data -name "*.geojson" | head -20
+          ls -la site/data/projects/copper_sulfide_mn/geospatial/
+          
       - name: D2) Verify site output exists
         # WHY: Zensical should create a static site in the configured output directory
         # (commonly "site/"). If the directory does not exist, the documentation
