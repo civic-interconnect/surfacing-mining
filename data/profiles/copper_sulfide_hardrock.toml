@@ -1,0 +1,54 @@
+id = "copper_sulfide_hardrock"
+title = "Copper Sulfide Hardrock Mining"
+
+[description]
+summary = "Profile for copper sulfide hardrock mining with localized watershed exposure and value externalization through downstream processing."
+
+[processing]
+stages = [
+  "exploration",
+  "construction",
+  "extraction",
+  "concentration",
+  "transport",
+  "smelting",
+  "refining",
+  "closure",
+  "post_closure_management",
+]
+
+[map_layers]
+required = [
+  "site",
+  "watershed",
+  "downstream_path",
+  "laurentian_divide",
+]
+optional = [
+  "protected_areas",
+  "nearby_communities",
+]
+
+[exposure_categories]
+items = [
+  "noise",
+  "traffic",
+  "surface_water",
+  "groundwater",
+  "tailings",
+  "acid_generation",
+  "post_closure_treatment",
+]
+
+[value_flow_categories]
+items = [
+  "local_jobs",
+  "external_contractors",
+  "equipment_procurement",
+  "processing_externalization",
+  "ownership",
+  "profit_realization",
+]
+
+[time_emphasis]
+primary = ["operations", "post_closure"]

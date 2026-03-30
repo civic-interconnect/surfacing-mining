@@ -1,0 +1,69 @@
+# evidence.toml - helium_mn
+# Sources, regulatory proceedings, and data references for this regional analysis.
+# All entries are placeholders; verify actuals before publishing.
+
+[sources]
+
+  [[sources.regulatory]]
+  id = "mn_dnr_minerals_helium"
+  title = "Minnesota DNR Minerals Division - Industrial Minerals Leasing"
+  agency = "Minnesota DNR"
+  url = "https://www.dnr.state.mn.us/lands_minerals/mineral_leasing/index.html"
+  notes = "State mineral leasing framework applicable to helium and associated gas extraction on state mineral lands."
+
+  [[sources.regulatory]]
+  id = "mn_pca_air_permits"
+  title = "Minnesota PCA Air Quality Permit Requirements - Natural Gas Processing"
+  agency = "Minnesota Pollution Control Agency"
+  url = "https://www.pca.state.mn.us/air/air-quality-permits"
+  notes = "Air permitting rules relevant to helium extraction and cryogenic separation facilities."
+
+  [[sources.regulatory]]
+  id = "mn_pca_groundwater"
+  title = "Minnesota Groundwater Protection Rules (Minn. R. 7060)"
+  agency = "Minnesota Pollution Control Agency"
+  url = "https://www.revisor.mn.gov/rules/7060/"
+  notes = "Groundwater standards applicable to drilling and well completion near sensitive aquifers."
+
+  [[sources.geological]]
+  id = "usgs_helium_critical_mineral_2022"
+  title = "USGS Helium - A Critical Mineral"
+  agency = "U.S. Geological Survey"
+  year = 2022
+  url = "https://www.usgs.gov/centers/national-minerals-information-center/helium-statistics-and-information"
+  notes = "National supply context; helium designated critical mineral. Useful for strategic framing of project."
+
+  [[sources.geological]]
+  id = "mn_geological_survey_duluth_complex"
+  title = "Minnesota Geological Survey - Duluth Complex and Precambrian Basement"
+  agency = "Minnesota Geological Survey"
+  url = "https://cse.umn.edu/mgs"
+  notes = "Geological context for helium-bearing formations in NE Minnesota Precambrian basement. Placeholder - identify specific MGS report."
+
+  [[sources.economic]]
+  id = "helium_global_supply_2023"
+  title = "Global Helium Supply and Demand Analysis"
+  year = 2023
+  notes = "PLACEHOLDER - identify industry or USGS source on helium price volatility and strategic reserve context. Key for revenue uncertainty framing."
+
+  [[sources.indigenous]]
+  id = "1854_treaty"
+  title = "Treaty of 1854 (LaPointe Treaty)"
+  notes = "Ceded territory rights retained by Ojibwe bands. Usufructuary rights relevant to any groundwater or surface impacts from drilling operations."
+
+  [[sources.community]]
+  id = "babbitt_city_comprehensive_plan"
+  title = "City of Babbitt Comprehensive Plan"
+  agency = "City of Babbitt, MN"
+  notes = "PLACEHOLDER - identify current plan. Context for community economic conditions, existing industrial land use, and municipal infrastructure capacity."
+
+[gaps]
+notes = """
+The following evidence categories lack identified sources and require research:
+- Site-specific subsurface characterization (formation pressure, helium concentration, associated gas composition)
+- Groundwater baseline for the Babbitt area (depth to water table, connectivity to surface waters)
+- Air quality baseline near proposed processing site
+- Tribal consultation records
+- Comparable helium extraction project environmental assessments (few domestic precedents)
+- Long-term helium price forecasting (highly volatile; affects project viability and tax revenue projections)
+"""

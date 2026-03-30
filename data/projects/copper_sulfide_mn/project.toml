@@ -1,0 +1,16 @@
+id = "copper_sulfide_mn"
+title = "Copper Sulfide MN"
+profile = "copper_sulfide_hardrock"
+scope = "regional pattern"
+unit_of_analysis = "profile + location"
+
+[location]
+state = "Minnesota"
+country = "United States"
+region = "Northeast Minnesota - Iron Range / Duluth Complex"
+anchor_city = "Ely"
+county = "St. Louis"
+
+[summary]
+status = "draft"
+notes = "Regional structural analysis for copper sulfide mining in Minnesota. Proposed operations in the Duluth Complex near Ely and Hoyt Lakes. Hardrock open pit or underground profile: large surface footprint, tailings, high AMD risk. Straddles Laurentian Divide; bifurcated drainage affects both Hudson Bay and Lake Superior basins."

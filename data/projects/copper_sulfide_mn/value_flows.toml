@@ -1,0 +1,109 @@
+# value_flows.toml - copper_sulfide_mn
+# Who receives value, at what scale, and over what time horizon.
+# All figures are structural placeholders; source and calibrate from project-specific data.
+
+[meta]
+profile = "copper_sulfide_hardrock"
+notes = "Value flow categories for a large-scale copper-nickel sulfide project in NE Minnesota."
+
+[[flows]]
+id = "commodity_revenue"
+label = "Commodity Revenue (Copper, Nickel, Cobalt, PGMs)"
+direction = "outflow_from_region"
+recipient = "Corporate shareholders / global commodity markets"
+weight = 0.30
+description = """
+Primary revenue stream. Copper, nickel, cobalt, and platinum group metals sold
+on global markets. Extraction site is local; value capture is primarily external.
+"""
+local_capture_fraction = "low (royalties + wages only)"
+time_horizon = "mine life (~20-30 years)"
+notes = "Local benefit flows through employment and taxes, not commodity revenue directly."
+
+[[flows]]
+id = "direct_employment"
+label = "Direct Employment - Construction and Operations"
+direction = "inflow_to_region"
+recipient = "Regional workforce (St. Louis County and surrounding)"
+weight = 0.20
+description = """
+Construction phase: temporary spike in employment. Operations: sustained but
+capital-intensive mines employ fewer workers per ton than legacy iron mining.
+Local hire fraction is a key variable; often contested in permit commitments.
+"""
+local_capture_fraction = "medium (residency and hiring requirements vary)"
+time_horizon = "construction (3-5 yr) + operational (~20-30 yr)"
+notes = "Indirect and induced multiplier effects add regional secondary employment."
+
+[[flows]]
+id = "state_local_taxes"
+label = "State and Local Tax Revenue"
+direction = "inflow_to_region"
+recipient = "Minnesota state government, St. Louis County, Iron Range school districts"
+weight = 0.15
+description = """
+Includes production tax (tonnage), property tax, sales tax on inputs/equipment,
+and income tax on wages. Minnesota's production tax structure directs funds
+partly to school trust lands and Iron Range Resources.
+"""
+local_capture_fraction = "high for county/district; moderate for state"
+time_horizon = "operational"
+notes = "Tax incentives or abatements during ramp-up reduce near-term receipts."
+
+[[flows]]
+id = "royalties"
+label = "Royalties and Mineral Rights Payments"
+direction = "inflow_variable"
+recipient = "State of Minnesota (state minerals); private mineral rights holders; potentially tribal"
+weight = 0.10
+description = """
+Mineral lease royalties for state mineral rights. Private mineral rights holders
+receive separate royalty streams. Tribal mineral rights, if applicable, add
+a further distribution dimension.
+"""
+local_capture_fraction = "partial (state royalties go to state general fund, not exclusively local)"
+time_horizon = "operational"
+
+[[flows]]
+id = "remediation_bond"
+label = "Reclamation and Closure Bond"
+direction = "inflow_conditional"
+recipient = "Minnesota DNR / public trust"
+weight = 0.10
+description = """
+Financial assurance required before operations begin. Held to cover
+post-closure reclamation and water treatment. Structural risk: bond adequacy
+is debated for perpetual-care sulfide sites. Underfunding transfers liability to public.
+"""
+local_capture_fraction = "intended to be full-cost; historically underfunded industry-wide"
+time_horizon = "post-closure (potentially perpetual)"
+notes = "Bond size and instrument type are key configurable variables in risk analysis."
+
+[[flows]]
+id = "infrastructure_investment"
+label = "Infrastructure Investment (Roads, Power, Water)"
+direction = "inflow_to_region"
+recipient = "Regional public and private beneficiaries"
+weight = 0.08
+description = """
+Mine development often requires road upgrades, transmission line extensions, and
+port/rail improvements. Some infrastructure has dual-use benefit to communities;
+some is mine-specific with no residual value post-closure.
+"""
+local_capture_fraction = "medium (dual-use infrastructure benefits persist)"
+time_horizon = "construction + operational + partial post-closure"
+
+[[flows]]
+id = "tourism_recreation_loss"
+label = "Tourism and Recreation Revenue (Counterfactual Loss)"
+direction = "outflow_counterfactual"
+recipient = "Displaced from Ely-area outfitters, hospitality, and guides"
+weight = 0.07
+description = """
+Not a direct payment but a structural displacement: mining activity and water
+quality risk reduce BWCAW visitation. Quantified as foregone revenue relative
+to no-project baseline. Often excluded from proponent economic models.
+"""
+local_capture_fraction = "negative (local loss)"
+time_horizon = "operational + reputational tail post-closure"
+notes = "Magnitude highly uncertain; sensitive to actual water quality outcomes."

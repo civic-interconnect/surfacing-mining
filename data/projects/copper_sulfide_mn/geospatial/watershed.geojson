@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual HUC-8 or HUC-10 watershed boundary from USGS NHD.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "rainy_river_watershed_sub",
+        "label": "Rainy River Watershed Sub-Basin (Placeholder)",
+        "huc_code": "09030001",
+        "drainage_direction": "north",
+        "outlet": "Rainy River / Lake of the Woods",
+        "status": "draft",
+        "notes": "Approximate boundary for the Vermilion River sub-watershed. North of Laurentian Divide. Drains to Hudson Bay via Rainy River. Source: USGS NHD - verify and replace."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.2000, 48.1000],
+            [-91.4000, 48.1000],
+            [-91.4000, 47.7500],
+            [-91.7000, 47.6500],
+            [-92.0000, 47.6500],
+            [-92.2000, 47.7500],
+            [-92.2000, 48.1000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lake_superior_watershed_sub",
+        "label": "Lake Superior Tributary Sub-Basin (Placeholder)",
+        "drainage_direction": "south/east",
+        "outlet": "Lake Superior / St. Lawrence Seaway",
+        "status": "draft",
+        "notes": "Approximate boundary for the St. Louis River headwaters sub-watershed. South of Laurentian Divide. Source: USGS NHD - verify and replace."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.2000, 47.6500],
+            [-91.7000, 47.6500],
+            [-91.4000, 47.4000],
+            [-91.8000, 47.3000],
+            [-92.2000, 47.4000],
+            [-92.2000, 47.6500]
+          ]
+        ]
+      }
+    }
+  ]
+}

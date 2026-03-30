@@ -1,0 +1,11 @@
+[[time_windows]]
+id = "construction"
+label = "Construction and ramp"
+
+[[time_windows]]
+id = "operations"
+label = "Operations"
+
+[[time_windows]]
+id = "post_closure"
+label = "Post-closure"

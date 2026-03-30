@@ -1,0 +1,112 @@
+# value_flows.toml - helium_mn
+# Who receives value, at what scale, and over what time horizon.
+# All figures are structural placeholders; source and calibrate from project-specific data.
+
+[meta]
+profile = "helium_gas"
+notes = "Value flow categories for helium gas extraction near Babbitt, MN. Helium is a federally designated critical mineral; strategic framing affects both national and local value capture arguments."
+
+[[flows]]
+id = "helium_commodity_revenue"
+label = "Helium Commodity Revenue"
+direction = "outflow_from_region"
+recipient = "Corporate shareholders / global industrial gas markets"
+weight = 0.30
+description = """
+Primary revenue stream. Helium sold to industrial, medical, defense, and technology
+sector customers globally. Extraction site is local; commodity value is captured externally.
+Helium prices are highly volatile and historically subject to supply shocks.
+Local benefit flows only through wages, taxes, and royalties.
+"""
+local_capture_fraction = "low (royalties + wages only)"
+time_horizon = "project life (duration highly uncertain; depends on reserve size and price)"
+notes = "Unlike bulk metals, helium has no recycling loop - once released it escapes to space. Scarcity premium may increase over time."
+
+[[flows]]
+id = "associated_gas_revenue"
+label = "Associated Gas Revenue (Co-extracted Hydrocarbons)"
+direction = "outflow_from_region"
+recipient = "Operator / commodity markets"
+weight = 0.10
+description = """
+Helium typically co-occurs with natural gas or nitrogen. Associated hydrocarbon gas
+may be sold separately or used as fuel gas for processing. Additional revenue stream
+for operator; adds regulatory complexity (gas well permitting vs. mineral well).
+"""
+local_capture_fraction = "low"
+time_horizon = "operational"
+
+[[flows]]
+id = "direct_employment"
+label = "Direct Employment - Drilling and Operations"
+direction = "inflow_to_region"
+recipient = "Regional workforce (St. Louis County)"
+weight = 0.18
+description = """
+Drilling phase: specialized crews, often non-local. Operations and processing:
+smaller, more stable workforce than mining. Local hire fraction varies widely.
+Babbitt has an existing industrial workforce from taconite operations.
+"""
+local_capture_fraction = "medium (processing crew more local than drilling crew)"
+time_horizon = "drilling campaigns + operational life"
+notes = "Total employment scale substantially smaller than a comparable mining project."
+
+[[flows]]
+id = "state_local_taxes"
+label = "State and Local Tax Revenue"
+direction = "inflow_to_region"
+recipient = "Minnesota state government, St. Louis County, Babbitt school district"
+weight = 0.15
+description = """
+Property tax on surface and processing facility, income tax on wages, sales tax.
+Minnesota's gas/mineral production tax structure for helium is less established
+than for taconite - tax treatment is a key configurable variable.
+"""
+local_capture_fraction = "high for county/municipality; moderate for state"
+time_horizon = "operational"
+notes = "Helium extraction tax regime in Minnesota may require legislative clarification."
+
+[[flows]]
+id = "royalties"
+label = "Royalties and Mineral Rights Payments"
+direction = "inflow_variable"
+recipient = "State of Minnesota (state mineral rights); private holders; potentially tribal"
+weight = 0.12
+description = """
+Helium mineral rights may be held by state, federal, or private parties separately
+from surface rights. Royalty structure for helium specifically is not well-established
+in Minnesota statutes - a significant governance gap.
+"""
+local_capture_fraction = "partial (state royalties to general fund)"
+time_horizon = "operational"
+notes = "Verify whether helium is classified under Minnesota's metallic or industrial mineral statutes."
+
+[[flows]]
+id = "national_strategic_value"
+label = "National Strategic / Critical Mineral Value"
+direction = "inflow_national"
+recipient = "U.S. economy broadly; defense and high-tech sectors"
+weight = 0.10
+description = """
+Helium is federally designated a critical mineral. Domestic production reduces
+dependence on foreign (Qatar, Algeria, Russia) supply. Strategic value accrues
+nationally, not locally - but is often cited in project justifications.
+"""
+local_capture_fraction = "negligible (national benefit, local cost)"
+time_horizon = "operational"
+notes = "Strategic framing is legitimate nationally but should not substitute for local economic accounting."
+
+[[flows]]
+id = "well_abandonment_bond"
+label = "Well Plugging and Abandonment Bond"
+direction = "inflow_conditional"
+recipient = "Minnesota DNR / public trust"
+weight = 0.05
+description = """
+Financial assurance required for well plugging at end of life. Minnesota's
+gas well bonding requirements may not be calibrated to a multi-well helium program.
+Underfunding transfers abandonment liability to state.
+"""
+local_capture_fraction = "intended full-cost; adequacy uncertain for novel project type"
+time_horizon = "post-closure"
+notes = "Compare to oil and gas orphaned well programs in peer states."

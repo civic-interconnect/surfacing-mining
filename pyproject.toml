@@ -1,0 +1,170 @@
+# ============================================================
+# pyproject.toml (Python project configuration)
+# ============================================================
+
+[project]
+name = "surfacing-mining" # Package distribution name (lowercase and dashes).
+description = "A framework for structured exploration of mining value flows, exposures, and time-indexed costs across profiles and regions."
+readme = "README.md"
+requires-python = ">=3.14"
+version = "0.1.0"
+license = { text = "MIT" }
+authors = [
+  { name = "Denise Case" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    # packaging required by validate-pyproject (below).
+    "bandit",
+    "deptry",
+    "packaging",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pyright",
+    "ruff",
+    "validate-pyproject",
+]
+docs = [
+    "mkdocstrings[python]",
+    "zensical",
+]
+
+[project.scripts]
+surfacing-mining = "surfacing_mining.cli:main"
+
+[project.urls]
+# WHY: Canonical project links used by tooling and documentation.
+Documentation = "https://civic-interconnect.github.io/surfacing-mining/"
+Issues = "https://github.com/civic-interconnect/surfacing-mining/issues"
+Repository = "https://github.com/civic-interconnect/surfacing-mining"
+
+# === Deptry
+
+[tool.deptry.per_rule_ignores]
+DEP002 = [
+    # === DEV TOOLING (not required at runtime) ===
+    "bandit",
+    "deptry",
+    "packaging",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pyright",
+    "ruff",
+    "validate-pyproject",
+
+    # === DOCUMENTATION TOOLING (not required at runtime) ===
+    "mkdocstrings",         # WHY: Needed for [python] extra (above).
+    "zensical",             # WHY: Zensical is used for AI-assisted documentation.
+]
+
+# === Pyright
+
+[tool.pyright]
+# WHY: Static type checking for early error detection and clearer interfaces.
+typeCheckingMode = "basic"
+include = ["src"]
+extraPaths = ["src"]
+pythonVersion = "3.14"
+reportMissingImports = "warning"
+reportMissingTypeStubs = "none"
+reportPrivateUsage = "none"
+useLibraryCodeForTypes = false
+venv = ".venv"
+venvPath = "."
+exclude = [
+    "**/node_modules/**",
+    "**/__pycache__/**",
+    "**/.git/**",
+    "**/.venv/**",
+    "**/data/**",
+    "**/artifacts/**",
+    "**/.*",
+]
+
+# === Pytest
+
+[tool.pytest.ini_options]
+# WHY: Ensure tests are discoverable and coverage is visible.
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-q --cov=multidimensional_evaluation_engine --cov-report=term-missing"
+
+# === RUFF (PYTHON FORMATTING AND LINTING) ===
+
+[tool.ruff]
+# WHY: Ruff provides fast linting and formatting with deterministic output.
+exclude = [
+    ".eggs",
+    "*.egg-info",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "site",
+]
+line-length = 88 # WHY: PEP 8 standard line length, wrap when possible.
+preview = false # WHY: Stable features only; avoid preview features.
+target-version = "py313" # WHY: Match latest supported Python version.
+unsafe-fixes = false # WHY: Avoid potentially unsafe automatic fixes.
+
+[tool.ruff.format]
+# WHY: Formatter choices should be stable to keep diffs small and predictable.
+indent-style = "space" # See also .gitattributes for indent style.
+line-ending = "auto" # Match existing files and let .gitattributes handle it.
+quote-style = "preserve" # Preserve existing quote styles to minimize churn.
+
+[tool.ruff.lint]
+# WHY: Professional baseline rules without requiring advanced refactors.
+select = [
+    "E",   # Basic syntax and structural correctness
+    "F",   # Undefined names and unused imports
+    "W",   # Warnings that catch easy issues early
+    "I",   # Deterministic import ordering
+    "UP",  # Modern Python constructs
+    "B",   # Common bug patterns
+    "PTH", # Prefer pathlib patterns
+]
+ignore = [
+  "E501", # Final line length handled by formatter
+]
+
+[tool.ruff.lint.isort]
+# WHY: Ordering imports helps keep code diffs (differences) readable.
+force-sort-within-sections = false # WHY: Avoid unnecessary churn by only sorting within sections.
+
+# === PER-FILE IGNORES (DEPENDS ON DOCSTRING POLICY) ===
+
+[tool.ruff.lint.per-file-ignores]
+# WHY: Some files MUST NOT undergo linting or automated fixes.
+
+# POLICY: Docstring rules are NOT enabled (no "D" in [tool.ruff.lint].select).
+"src/**/__init__.py" = ["F401"]     # Allow re-export patterns
+"src/**/_version.py" = ["ALL"]      # Auto-generated file (do not lint)
+"notebooks/**/*.ipynb" = ["F821"]   # Notebooks may have runtime-defined names
+
+# === CHOOSE PROJECT DOC STYLE ===
+
+[tool.ruff.lint.pydocstyle]
+# WHY: Choose one docstring convention project-wide to avoid mixed styles and churn.
+# REQ: Google style is the default policy for this repository.
+convention = "google" # ALT: "numpy" (choose one convention project-wide)
+
+# === BUILD SYSTEM ===
+
+[build-system]
+# REQ.BUILD: A build backend MUST be declared to enable package discovery.
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=80.9.0"]
+
+[tool.setuptools]
+# REQ.PACKAGES: Package discovery MUST be rooted at src/.
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+# WHY: Explicitly define package discovery location.
+where = ["src"]

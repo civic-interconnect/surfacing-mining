@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surfacing Mining: Explorer</title>
+  <meta name="description"
+    content="Interactive explorer for surfacing mining project profiles, value flows, exposures, evidence, and geospatial context.">
+  <meta name="theme-color" content="#0b3d2e">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Surfacing Mining <span>/</span> Explorer</div>
+
+    <div class="header-right">
+      <div class="header-status" id="hdr-status">no data loaded</div>
+
+
+      <div class="project-pickers">
+        <label for="primary-project-select" class="sr-only">Primary project</label>
+        <select id="primary-project-select"></select>
+
+        <label for="comparison-project-select" class="sr-only">Comparison project</label>
+        <select id="comparison-project-select"></select>
+
+        <label class="compare-toggle">
+          <input type="checkbox" id="compare-enabled">
+          <span>Compare</span>
+        </label>
+      </div>
+
+      <button class="btn btn-sm" id="load-example-btn" type="button">Load example data</button>
+      <a href="https://github.com/civic-interconnect/surfacing-mining" target="_blank" rel="noopener"
+        class="github-link" title="View on GitHub" aria-label="View project on GitHub">
+        <svg viewBox="0 0 512 512" aria-hidden="true">
+          <path
+            d="M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8z" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Primary">
+    <button class="tab active" data-tab="projects" type="button">Projects</button>
+    <button class="tab" data-tab="compare" type="button">Compare</button>
+    <button class="tab" data-tab="map" type="button">Map</button>
+    <button class="tab" data-tab="evidence" type="button">Evidence</button>
+    <button class="tab" data-tab="data" type="button">Data</button>
+    <button class="tab" data-tab="export" type="button">Export</button>
+  </nav>
+
+  <main>
+    <!-- PROJECTS -->
+    <section id="page-projects" class="page active" aria-labelledby="tab-projects">
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Project Summary</span>
+          </div>
+          <div class="card-body" id="project-summary-panel"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Data Completeness</span>
+          </div>
+          <div class="card-body" id="data-status-panel"></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Profile Summary</span>
+          </div>
+          <div class="card-body" id="profile-summary-panel"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Quick Actions</span>
+          </div>
+          <div class="card-body">
+            <div class="btn-row">
+              <button class="btn btn-sm" id="new-project-btn" type="button">New project</button>
+              <button class="btn btn-sm" id="duplicate-project-btn" type="button">Duplicate project</button>
+              <button class="btn btn-sm" id="validate-project-btn" type="button">Validate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section id="page-compare" class="page" aria-labelledby="tab-compare">
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">Side-by-Side Comparison</span>
+        </div>
+        <div class="card-body" id="comparison-table-panel"></div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="page-map" class="page" aria-labelledby="tab-map">
+      <div class="grid-map">
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Map Layers</span>
+          </div>
+          <div class="card-body" id="map-layer-controls"></div>
+        </div>
+
+        <div class="card map-card">
+          <div class="card-body">
+            <div id="map" aria-label="Project map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVIDENCE -->
+    <section id="page-evidence" class="page" aria-labelledby="tab-evidence">
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">Claims and Sources</span>
+        </div>
+        <div class="card-body">
+          <div class="subtabs" id="evidence-subtabs">
+            <button class="subtab active" data-subtab="claims" type="button">Claims</button>
+            <button class="subtab" data-subtab="sources" type="button">Sources</button>
+            <button class="subtab" data-subtab="status" type="button">Status</button>
+          </div>
+
+          <div id="evidence-claims-panel" class="subpage active"></div>
+          <div id="evidence-sources-panel" class="subpage"></div>
+          <div id="evidence-status-panel" class="subpage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA -->
+    <section id="page-data" class="page" aria-labelledby="tab-data">
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">Data Editors</span>
+        </div>
+        <div class="card-body">
+          <div class="subtabs" id="data-subtabs">
+            <button class="subtab active" data-subtab="project" type="button">Project</button>
+            <button class="subtab" data-subtab="value-flows" type="button">Value Flows</button>
+            <button class="subtab" data-subtab="exposures" type="button">Exposures</button>
+            <button class="subtab" data-subtab="evidence" type="button">Evidence</button>
+            <button class="subtab" data-subtab="geospatial" type="button">Geospatial</button>
+            <button class="subtab" data-subtab="profile" type="button">Profile</button>
+          </div>
+
+          <div class="editor-mode-row">
+            <label>
+              <input type="radio" name="editor-mode" value="form" checked>
+              Form editor
+            </label>
+            <label>
+              <input type="radio" name="editor-mode" value="raw">
+              Raw file editor
+            </label>
+          </div>
+
+          <div id="data-editor-panel"></div>
+
+          <div class="editor-actions">
+            <button class="btn btn-sm" id="validate-data-btn" type="button">Validate</button>
+            <button class="btn btn-sm" id="download-current-file-btn" type="button">Download current file</button>
+            <button class="btn btn-sm btn-accent" id="apply-edits-btn" type="button">Apply edits</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPORT -->
+    <section id="page-export" class="page" aria-labelledby="tab-export">
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">Export</span>
+        </div>
+        <div class="card-body">
+          <div class="btn-grid">
+            <button class="btn btn-sm" id="export-project-json-btn" type="button">Export project JSON</button>
+            <button class="btn btn-sm" id="export-comparison-json-btn" type="button">Export comparison JSON</button>
+            <button class="btn btn-sm" id="export-markdown-btn" type="button">Export markdown summary</button>
+            <button class="btn btn-sm" id="export-citations-btn" type="button">Export citations</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+# exposures.toml - helium_mn
+# Local exposure categories: who bears costs, risks, and disruptions.
+# Weights are configurable defaults; override per analysis run.
+# Helium extraction profile: wellpad drilling, cryogenic separation, no AMD risk.
+
+[meta]
+profile = "helium_gas"
+notes = "Exposure categories tuned for helium gas extraction near Babbitt, MN. Substantially different risk profile from sulfide hardrock mining: smaller surface footprint, no acid mine drainage, but groundwater and air quality concerns during operations."
+
+[[exposures]]
+id = "groundwater_quality"
+label = "Groundwater Quality and Aquifer Integrity"
+category = "environmental"
+weight = 0.25
+description = """
+Drilling and well completion operations carry risk of groundwater contamination
+through casing failure, improper cement, or pressure anomalies. In a high-water-table
+environment with abundant lakes and wetlands, connectivity between aquifers and
+surface waters is a key variable. Associated gas co-extraction may include
+brine disposal concerns.
+"""
+local_bearer = "Babbitt residents on well water, downstream lake users, Iron Range municipalities"
+time_horizon = "operational + long tail (casing integrity degrades post-abandonment)"
+reversibility = "low for aquifer contamination"
+
+[[exposures]]
+id = "air_quality_processing"
+label = "Air Quality - Processing Facility Emissions"
+category = "environmental"
+weight = 0.20
+description = """
+Cryogenic helium separation requires processing associated natural gas. Facility
+emissions may include VOCs, methane, NOx, and particulates. Flaring during
+startup, maintenance, or pressure events adds episodic emission spikes.
+Processing facility is likely the dominant surface footprint and emission source.
+"""
+local_bearer = "Babbitt residents, workers, downwind communities"
+time_horizon = "operational"
+reversibility = "high post-closure"
+
+[[exposures]]
+id = "surface_disturbance_wellpads"
+label = "Surface Disturbance - Wellpads and Access Roads"
+category = "environmental"
+weight = 0.15
+description = """
+Each wellpad requires cleared area, access road construction, and pipeline right-of-way.
+Smaller footprint per well than open-pit mining, but cumulative disturbance across
+a multi-well program adds up. Wetland and forest impacts require Army Corps and
+state permits.
+"""
+local_bearer = "Adjacent landowners, wetland and forest users, wildlife"
+time_horizon = "operational; partial restoration post-abandonment"
+reversibility = "medium (revegetation feasible; wetland impacts harder)"
+
+[[exposures]]
+id = "tribal_treaty_rights"
+label = "Tribal Treaty Rights and Subsistence"
+category = "cultural_legal"
+weight = 0.15
+description = """
+Ojibwe bands retain usufructuary rights in the 1837 and 1854 ceded territories.
+Groundwater and surface water impacts from drilling, plus habitat fragmentation
+from wellpads and roads, can infringe wild rice, fishing, and hunting rights.
+"""
+local_bearer = "Bois Forte, Fond du Lac, and other bands with rights in St. Louis County"
+time_horizon = "permanent"
+reversibility = "very low"
+
+[[exposures]]
+id = "wilderness_recreation_adjacency"
+label = "Wilderness Recreation and Tourism - Adjacency Risk"
+category = "economic"
+weight = 0.10
+description = """
+Babbitt is a gateway community for BWCAW and regional lake country recreation.
+Industrial drilling and processing operations (noise, light, traffic, visual) and
+any water quality incidents can suppress visitation and regional tourism revenue.
+Lower risk than sulfide mining but non-zero, particularly for water quality events.
+"""
+local_bearer = "Babbitt and Ely-area outfitters, guides, seasonal workers"
+time_horizon = "operational + reputational tail"
+reversibility = "medium"
+
+[[exposures]]
+id = "public_fiscal_liability"
+label = "Public Fiscal Liability - Well Abandonment"
+category = "fiscal"
+weight = 0.10
+description = """
+Improperly abandoned wells are a documented, long-term public liability nationwide.
+If the operator becomes insolvent, state bonds for well plugging and reclamation
+are frequently insufficient. Minnesota has limited precedent for helium well abandonment.
+"""
+local_bearer = "Minnesota taxpayers; potentially federal government if on federal mineral lands"
+time_horizon = "post-closure, potentially decades"
+reversibility = "very low for orphaned wells"
+
+[[exposures]]
+id = "noise_traffic"
+label = "Noise and Heavy Traffic - Drilling Phase"
+category = "quality_of_life"
+weight = 0.05
+description = """
+Drilling operations run 24/7 during active phases. Rig noise and heavy truck
+traffic on rural roads concentrate disruption near wellpads and along haul routes.
+Episodic and bounded to drilling campaigns.
+"""
+local_bearer = "Residents within ~3 km of active wellpads and along access routes"
+time_horizon = "drilling campaigns (weeks to months per pad)"
+reversibility = "high post-drilling"

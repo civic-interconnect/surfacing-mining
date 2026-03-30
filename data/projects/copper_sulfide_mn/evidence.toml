@@ -1,0 +1,57 @@
+# evidence.toml - copper_sulfide_mn
+# Sources, regulatory proceedings, and data references for this regional analysis.
+# All entries are placeholders; verify actuals before publishing.
+
+[sources]
+
+  [[sources.regulatory]]
+  id = "polymet_eis_2015"
+  title = "PolyMet NorthMet Project Draft Environmental Impact Statement"
+  agency = "U.S. Army Corps of Engineers / Minnesota DNR"
+  year = 2015
+  url = "https://www.polymetmining.com/northmet-project/"
+  notes = "Joint state/federal EIS; copper-nickel sulfide mining in Mesabi Iron Range."
+
+  [[sources.regulatory]]
+  id = "twin_metals_eis_2022"
+  title = "Twin Metals Minnesota Draft EIS"
+  agency = "U.S. Forest Service"
+  year = 2022
+  url = "https://www.fs.usda.gov/project/?project=57552"
+  notes = "Proposed underground copper-nickel mine near BWCAW. Federal withdrawal controversy."
+
+  [[sources.regulatory]]
+  id = "mn_dnr_mineland"
+  title = "Minnesota Mineland Reclamation Rules (Minn. R. 6130)"
+  agency = "Minnesota DNR"
+  url = "https://www.revisor.mn.gov/rules/6130/"
+  notes = "State reclamation standards applicable to metallic sulfide mining."
+
+  [[sources.water_quality]]
+  id = "usgs_boundary_waters_baseline"
+  title = "USGS Boundary Waters Canoe Area Wilderness Water Quality Baseline"
+  agency = "U.S. Geological Survey"
+  year = 2019
+  notes = "Baseline chemistry for lakes and streams in the BWCAW watershed. Placeholder ref."
+
+  [[sources.economic]]
+  id = "mn_dept_employment_mining_2023"
+  title = "Minnesota Mining Industry Employment and Wages 2023"
+  agency = "Minnesota Department of Employment and Economic Development"
+  year = 2023
+  url = "https://mn.gov/deed/"
+  notes = "Statewide employment data; use for regional multiplier calibration."
+
+  [[sources.indigenous]]
+  id = "1854_treaty"
+  title = "Treaty of 1854 (LaPointe Treaty)"
+  notes = "Ceded territory rights retained by Ojibwe bands. Usufructuary rights relevant to any surface/water impacts."
+
+[gaps]
+notes = """
+The following evidence categories lack identified sources and require research:
+- Site-specific geochemical characterization (sulfide content, acid generation potential)
+- Independent economic modeling of downstream tourism/recreation impacts
+- Long-term monitoring data from comparable Minnesota or Great Lakes sulfide operations
+- Tribal consultation records and government-to-government communications
+"""

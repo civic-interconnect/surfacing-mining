@@ -1,0 +1,61 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Intent, Scope, and Role)
+# ============================================================
+
+schema = "se-manifest-1"
+schema_url = "https://github.com/structural-explainability/spec-se/blob/main/manifests/se-manifest-1.md"
+
+[meta]
+framework = "Structural Explainability"
+framework_url = "https://github.com/structural-explainability"
+description = "Declarative description of repository intent, scope, and role."
+purpose = "To make explicit the boundaries, responsibilities, and expectations of this exploratory decision system."
+
+[repo]
+name = "surfacing-mining"
+kind = "application"
+status = "exploratory"
+since = "2026"
+summary = "A data-driven framework for surfacing mining decisions, value flows, and distributions of local exposure, external value capture, and time-indexed costs."
+
+[layer]
+space = "SE"
+role = "exploration-system"
+
+[depends]
+required = []
+optional = []
+
+[provides]
+artifacts = [
+  "Profile templates (TOML) for extraction activity classes",
+  "Project data instances (TOML) for regional analyses",
+  "Evidence and geospatial layers per project",
+  "Explorer UI (interactive visualization)",
+  "JSON export for downstream analysis",
+]
+
+[scope]
+includes = [
+  "structural modeling of value flows and their recipients",
+  "structural modeling of exposures and their local bearers",
+  "time-indexed analysis of when costs and benefits occur",
+  "comparison of projects across profiles and locations",
+  "explicit representation of evidence gaps",
+  "geospatial context for watershed and protected area relationships",
+  "configurable weights, thresholds, and assumptions",
+]
+
+excludes = [
+  "normative policy recommendations or prescriptions",
+  "legal or regulatory compliance determinations",
+  "causal claims about real-world outcomes",
+  "empirical validation of project-specific figures",
+  "determination of project admissibility or approval",
+  "identity or persistence regime definitions",
+  "interpretation-boundary enforcement",
+]
+
+[citation]
+cff = "CITATION.cff"
+preferred = "software"

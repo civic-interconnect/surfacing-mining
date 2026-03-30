@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual HUC-8 or HUC-10 watershed boundaries from USGS NHD for the Babbitt area.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "embarrass_river_watershed",
+        "label": "Embarrass River Sub-Watershed (Placeholder)",
+        "huc_code": "09030005",
+        "drainage_direction": "north",
+        "outlet": "Embarrass River → Vermilion River → Rainy River → Hudson Bay",
+        "status": "draft",
+        "notes": "The Embarrass River drains north from the Babbitt area, crossing the Laurentian Divide vicinity and joining the Vermilion River system. Drains to Hudson Bay. Placeholder - verify with USGS NHD."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.3000, 47.9000],
+            [-91.7000, 47.9000],
+            [-91.7000, 47.6500],
+            [-91.9000, 47.5500],
+            [-92.2000, 47.5500],
+            [-92.3000, 47.6500],
+            [-92.3000, 47.9000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "st_louis_river_headwaters",
+        "label": "St. Louis River Headwaters Sub-Watershed (Placeholder)",
+        "drainage_direction": "south/southwest",
+        "outlet": "St. Louis River → Lake Superior → St. Lawrence Seaway",
+        "status": "draft",
+        "notes": "Southern drainage from Babbitt area enters the St. Louis River headwaters. This watershed drains to Lake Superior via Duluth. Any southern-draining groundwater contamination would affect this system. Placeholder - verify with USGS NHD."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.3000, 47.5500],
+            [-91.9000, 47.5500],
+            [-91.7000, 47.3500],
+            [-92.0000, 47.2500],
+            [-92.3000, 47.3500],
+            [-92.3000, 47.5500]
+          ]
+        ]
+      }
+    }
+  ]
+}

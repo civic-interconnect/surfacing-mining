@@ -1,0 +1,11 @@
+[[regions]]
+id = "local"
+label = "Local"
+
+[[regions]]
+id = "external_us"
+label = "External (U.S.)"
+
+[[regions]]
+id = "external_non_us"
+label = "External (Non-U.S.)"

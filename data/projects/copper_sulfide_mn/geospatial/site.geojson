@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual project footprint from EIS or permit application.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "site_footprint",
+        "label": "Mine Site Footprint (Placeholder)",
+        "project": "copper_sulfide_mn",
+        "status": "draft",
+        "notes": "Approximate centroid near Twin Metals proposed underground mine area, south of Ely MN. Polygon is illustrative only."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-91.9200, 47.8400],
+            [-91.8600, 47.8400],
+            [-91.8600, 47.8000],
+            [-91.9200, 47.8000],
+            [-91.9200, 47.8400]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "site_centroid",
+        "label": "Site Centroid (Placeholder)",
+        "status": "draft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-91.8900, 47.8200]
+      }
+    }
+  ]
+}

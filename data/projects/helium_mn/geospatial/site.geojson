@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual lease area and wellpad locations from permit application.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lease_area",
+        "label": "Helium Lease Area (Placeholder)",
+        "project": "helium_mn",
+        "status": "draft",
+        "notes": "Approximate lease area polygon south of Babbitt, MN. Helium extraction programs typically involve multiple wellpads distributed across a lease area rather than a single concentrated footprint. Polygon is illustrative only."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.0800, 47.6800],
+            [-91.9200, 47.6800],
+            [-91.9200, 47.6000],
+            [-92.0800, 47.6000],
+            [-92.0800, 47.6800]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wellpad_1",
+        "label": "Wellpad 1 (Placeholder)",
+        "type": "wellpad",
+        "status": "draft",
+        "notes": "Illustrative wellpad location within lease area."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-92.0200, 47.6600]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wellpad_2",
+        "label": "Wellpad 2 (Placeholder)",
+        "type": "wellpad",
+        "status": "draft",
+        "notes": "Illustrative wellpad location within lease area."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-91.9800, 47.6300]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "processing_facility",
+        "label": "Processing / Cryogenic Separation Facility (Placeholder)",
+        "type": "processing",
+        "status": "draft",
+        "notes": "Illustrative location for helium liquefaction and processing facility. Typically co-located near wellpads or at a central gathering point. Primary air emission source."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-92.0000, 47.6700]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "babbitt_city_center",
+        "label": "Babbitt, MN (City Center Reference)",
+        "type": "reference",
+        "status": "reference"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-91.9433, 47.7158]
+      }
+    }
+  ]
+}

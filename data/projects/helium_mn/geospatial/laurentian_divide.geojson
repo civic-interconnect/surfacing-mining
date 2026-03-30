@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual Laurentian Divide centerline derived from USGS NHD flowlines or Minnesota DNR watershed data.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "laurentian_divide_babbitt_segment",
+        "label": "Laurentian Divide - Babbitt / Iron Range Segment",
+        "description": "Continental drainage divide separating Hudson Bay basin (north) from Lake Superior / St. Lawrence basin (south). Near Babbitt the divide runs roughly east-west just north of the city, trending slightly south as it passes through the Iron Range.",
+        "significance": "Babbitt sits close to and slightly south of the divide. The proposed lease area straddles or lies just south of the divide, meaning drainage from the site may flow predominantly to the Lake Superior basin (St. Louis River) rather than the Rainy River system. Verify site position relative to divide from NHD data.",
+        "local_note": "Divide position near Babbitt differs from the Ely area - verify that wellpad and processing facility locations are correctly assigned to north or south drainage in downstream_path.geojson.",
+        "source": "PLACEHOLDER - derive from USGS NHD or MN DNR watershed boundary layer",
+        "status": "draft"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-92.5000, 47.7200],
+          [-92.2000, 47.7000],
+          [-91.9500, 47.7000],
+          [-91.7000, 47.7200],
+          [-91.4000, 47.7500],
+          [-91.1000, 47.8000],
+          [-90.8000, 47.8500],
+          [-90.5000, 47.9000]
+        ]
+      }
+    }
+  ]
+}

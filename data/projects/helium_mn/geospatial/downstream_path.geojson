@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual NHD flowline trace from site vicinity downstream in both drainage directions.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "downstream_path_north",
+        "label": "Downstream Path - North Drainage (Embarrass River → Vermilion River → Rainy River)",
+        "direction": "north",
+        "drainage_basin": "Hudson Bay",
+        "key_waterbodies": ["Embarrass River", "Vermilion River", "Crane Lake", "Rainy River"],
+        "start": "North lease area boundary / processing facility vicinity",
+        "end": "Vermilion River confluence (placeholder)",
+        "status": "draft",
+        "notes": "Illustrative north-draining flowpath from the Babbitt lease area. The Embarrass River collects north-draining runoff from the Iron Range before joining the Vermilion River system near Tower, MN. Verify with NHD flowlines."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-92.0000, 47.6700],
+          [-92.0200, 47.7100],
+          [-92.0500, 47.7600],
+          [-92.0800, 47.8100],
+          [-92.0500, 47.8600],
+          [-92.0000, 47.9200],
+          [-91.9500, 47.9700],
+          [-91.8500, 48.0200]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "downstream_path_south",
+        "label": "Downstream Path - South Drainage (St. Louis River → Lake Superior)",
+        "direction": "south/southwest",
+        "drainage_basin": "Lake Superior / St. Lawrence",
+        "key_waterbodies": ["St. Louis River headwaters", "St. Louis River", "Lake Superior"],
+        "start": "South lease area boundary",
+        "end": "St. Louis River main stem (placeholder)",
+        "status": "draft",
+        "notes": "Illustrative south-draining flowpath from the Babbitt lease area toward St. Louis River headwaters. The St. Louis River headwaters originate in this area before flowing southwest to Duluth and Lake Superior. Verify with NHD flowlines. NOTE: Babbitt's position near the divide means the south-draining path may be the primary drainage direction - confirm from NHD."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-92.0000, 47.6200],
+          [-92.0500, 47.5700],
+          [-92.1000, 47.5200],
+          [-92.1500, 47.4700],
+          [-92.2000, 47.4200],
+          [-92.2500, 47.3700],
+          [-92.3000, 47.3200]
+        ]
+      }
+    }
+  ]
+}

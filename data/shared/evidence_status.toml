@@ -1,0 +1,15 @@
+[[evidence_status]]
+id = "projected"
+label = "Projected"
+
+[[evidence_status]]
+id = "verified"
+label = "Verified"
+
+[[evidence_status]]
+id = "unresolved"
+label = "Unresolved"
+
+[[evidence_status]]
+id = "not_applicable"
+label = "Not applicable"

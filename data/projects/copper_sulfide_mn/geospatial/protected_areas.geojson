@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual boundaries from USFS, PADUS, or Minnesota DNR.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bwcaw",
+        "label": "Boundary Waters Canoe Area Wilderness (BWCAW)",
+        "designation": "Wilderness (USFS)",
+        "managing_agency": "U.S. Forest Service - Superior National Forest",
+        "area_acres_approx": 1090000,
+        "status": "draft",
+        "significance": "Largest wilderness area east of the Rockies. No motorized equipment, no mining. Federal mineral withdrawal debated 2017-2022. Directly north and northeast of proposed copper sulfide projects.",
+        "source": "PLACEHOLDER - replace with PADUS or USFS official boundary shapefile"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.0000, 47.9000],
+            [-91.0000, 47.9000],
+            [-90.5000, 48.0000],
+            [-90.0000, 48.1000],
+            [-89.5000, 48.2000],
+            [-89.5000, 48.5000],
+            [-90.5000, 48.6000],
+            [-91.5000, 48.5000],
+            [-92.0000, 48.3000],
+            [-92.5000, 48.0000],
+            [-92.0000, 47.9000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "superior_national_forest",
+        "label": "Superior National Forest (non-Wilderness portions)",
+        "designation": "National Forest",
+        "managing_agency": "U.S. Forest Service",
+        "status": "draft",
+        "significance": "Surrounds BWCAW; mineral leasing permissible but subject to USFS review. Copper sulfide projects within SNF require federal permits including USFS special use authorization.",
+        "source": "PLACEHOLDER - replace with USFS official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.5000, 47.7000],
+            [-91.0000, 47.7000],
+            [-90.0000, 47.8000],
+            [-89.5000, 48.0000],
+            [-89.5000, 48.6000],
+            [-92.5000, 48.6000],
+            [-92.5000, 47.7000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "voyageurs_national_park",
+        "label": "Voyageurs National Park",
+        "designation": "National Park",
+        "managing_agency": "National Park Service",
+        "status": "draft",
+        "significance": "Northwest of BWCAW; water quality in connected watershed. Mining prohibited within park boundary.",
+        "source": "PLACEHOLDER - replace with NPS official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.1000, 48.4000],
+            [-92.2000, 48.4000],
+            [-92.2000, 48.7000],
+            [-93.1000, 48.7000],
+            [-93.1000, 48.4000]
+          ]
+        ]
+      }
+    }
+  ]
+}

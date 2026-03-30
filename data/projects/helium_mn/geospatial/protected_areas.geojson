@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual boundaries from USFS, NPS, PADUS, or Minnesota DNR.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bwcaw",
+        "label": "Boundary Waters Canoe Area Wilderness (BWCAW)",
+        "designation": "Wilderness (USFS)",
+        "managing_agency": "U.S. Forest Service - Superior National Forest",
+        "area_acres_approx": 1090000,
+        "status": "draft",
+        "babbitt_proximity_note": "BWCAW southern boundary is approximately 5-10 miles north of Babbitt. Closer to the city than the Ely-area copper projects. Water quality and noise impacts from processing facility would be evaluated relative to this proximity.",
+        "source": "PLACEHOLDER - replace with PADUS or USFS official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.5000, 47.8000],
+            [-91.0000, 47.8000],
+            [-90.5000, 47.9000],
+            [-89.5000, 48.2000],
+            [-89.5000, 48.6000],
+            [-91.5000, 48.6000],
+            [-92.5000, 48.3000],
+            [-93.0000, 48.0000],
+            [-92.5000, 47.8000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "superior_national_forest",
+        "label": "Superior National Forest",
+        "designation": "National Forest",
+        "managing_agency": "U.S. Forest Service",
+        "status": "draft",
+        "babbitt_proximity_note": "The Babbitt lease area may overlap with or abut Superior National Forest lands. Any surface operations on SNF lands require USFS special use authorization in addition to state permits.",
+        "source": "PLACEHOLDER - replace with USFS official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.8000, 47.6500],
+            [-91.0000, 47.6500],
+            [-89.5000, 47.8000],
+            [-89.5000, 48.6000],
+            [-92.8000, 48.6000],
+            [-92.8000, 47.6500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bear_island_state_forest",
+        "label": "Bear Island State Forest",
+        "designation": "State Forest",
+        "managing_agency": "Minnesota DNR - Division of Forestry",
+        "status": "draft",
+        "notes": "State forest lands in the Babbitt area. Minnesota DNR manages mineral leasing on state lands; forest land designation may affect surface operations permitting.",
+        "source": "PLACEHOLDER - replace with MN DNR official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-92.2000, 47.6500],
+            [-91.8000, 47.6500],
+            [-91.8000, 47.5000],
+            [-92.2000, 47.5000],
+            [-92.2000, 47.6500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "voyageurs_national_park",
+        "label": "Voyageurs National Park",
+        "designation": "National Park",
+        "managing_agency": "National Park Service",
+        "status": "draft",
+        "notes": "Northwest of Babbitt; water quality in connected Rainy River watershed. Farther from proposed helium lease area than from Ely-area copper projects.",
+        "source": "PLACEHOLDER - replace with NPS official boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.1000, 48.4000],
+            [-92.2000, 48.4000],
+            [-92.2000, 48.7000],
+            [-93.1000, 48.7000],
+            [-93.1000, 48.4000]
+          ]
+        ]
+      }
+    }
+  ]
+}

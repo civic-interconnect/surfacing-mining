@@ -1,0 +1,18 @@
+# data/projects/helium_mn/project.toml
+
+id = "helium_mn"
+title = "Helium Extraction MN"
+profile = "helium_gas"
+scope = "regional pattern"
+unit_of_analysis = "profile + location"
+
+[location]
+state = "Minnesota"
+country = "United States"
+region = "Northeast Minnesota - Iron Range"
+anchor_city = "Babbitt"
+county = "St. Louis"
+
+[summary]
+status = "draft"
+notes = "Regional structural analysis for helium extraction in Minnesota. Proposed operations near Babbitt in the Duluth Complex. Gas extraction profile: wellpad drilling, cryogenic separation, no AMD risk. Sits near Laurentian Divide; primary drainage direction (north vs. south) requires NHD verification."

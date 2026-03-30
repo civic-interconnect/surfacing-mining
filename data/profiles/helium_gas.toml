@@ -1,0 +1,52 @@
+id = "helium_gas"
+title = "Helium Gas Extraction"
+
+[description]
+summary = "Profile for helium extraction with wellfield and processing infrastructure, regional industrial footprint, and externalized value through processing and gas markets."
+
+[processing]
+stages = [
+  "exploration",
+  "drilling",
+  "testing",
+  "processing",
+  "compression",
+  "transport",
+  "operations",
+  "closure",
+]
+
+[map_layers]
+required = [
+  "site",
+  "regional_context",
+]
+optional = [
+  "nearby_communities",
+  "mineral_rights_context",
+  "infrastructure",
+]
+
+[exposure_categories]
+items = [
+  "noise",
+  "traffic",
+  "land_use",
+  "industrial_footprint",
+  "groundwater",
+  "air_emissions",
+  "regulatory_structure",
+]
+
+[value_flow_categories]
+items = [
+  "local_jobs",
+  "external_contractors",
+  "equipment_procurement",
+  "processing_externalization",
+  "ownership",
+  "profit_realization",
+]
+
+[time_emphasis]
+primary = ["construction", "operations"]

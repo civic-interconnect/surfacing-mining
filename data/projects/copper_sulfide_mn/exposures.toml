@@ -1,0 +1,101 @@
+# exposures.toml - copper_sulfide_mn
+# Local exposure categories: who bears costs, risks, and disruptions.
+# Weights are configurable defaults; override per analysis run.
+
+[meta]
+profile = "copper_sulfide_hardrock"
+notes = "Exposure categories tuned for sulfide mining in a lakeland/wilderness-adjacent context."
+
+[[exposures]]
+id = "water_quality_downstream"
+label = "Downstream Water Quality"
+category = "environmental"
+weight = 0.25
+description = """
+Risk of acid mine drainage (AMD) and heavy metal leaching into surface and groundwater.
+Sulfide ore oxidation produces sulfuric acid; highest concern for lakes, rivers, and
+wetlands downstream of tailings and waste rock facilities.
+"""
+local_bearer = "Downstream municipalities, tribal communities, outfitters, recreational users"
+time_horizon = "multi-generational (decades to centuries post-closure)"
+reversibility = "low"
+
+[[exposures]]
+id = "wilderness_recreation_tourism"
+label = "Wilderness Recreation and Tourism Economy"
+category = "economic"
+weight = 0.20
+description = """
+Ely and surrounding communities depend substantially on BWCAW-related tourism.
+Mine operations (noise, dust, road traffic, visual impact) and water quality risk
+can suppress visitation and reduce outfitter/hospitality revenue.
+"""
+local_bearer = "Ely-area small businesses, outfitters, guides, seasonal workers"
+time_horizon = "operational (ongoing) + reputational tail"
+reversibility = "medium"
+
+[[exposures]]
+id = "tribal_treaty_rights"
+label = "Tribal Treaty Rights and Subsistence"
+category = "cultural_legal"
+weight = 0.20
+description = """
+Ojibwe bands retain usufructuary rights in the 1837 and 1854 ceded territories.
+Water quality degradation and habitat alteration can infringe wild rice harvesting,
+fishing, and hunting rights regardless of state permit status.
+"""
+local_bearer = "Bois Forte, Fond du Lac, Grand Portage, Leech Lake, Mille Lacs, White Earth bands"
+time_horizon = "permanent"
+reversibility = "very low"
+
+[[exposures]]
+id = "air_quality_dust"
+label = "Air Quality - Fugitive Dust and Diesel"
+category = "environmental"
+weight = 0.10
+description = """
+Open pit or crush/haul operations generate silica-bearing dust and diesel particulate.
+Exposure concentrated near operations and along haul routes.
+"""
+local_bearer = "Workers, residents within ~5 km of operational footprint"
+time_horizon = "operational"
+reversibility = "high post-closure"
+
+[[exposures]]
+id = "property_values"
+label = "Property Values"
+category = "economic"
+weight = 0.10
+description = """
+Proximity to mine operations and associated water/recreational risk can suppress
+residential and recreational property values in surrounding lake country.
+"""
+local_bearer = "Property owners in St. Louis, Lake, and Cook counties"
+time_horizon = "operational + tail"
+reversibility = "medium"
+
+[[exposures]]
+id = "public_fiscal_liability"
+label = "Public Fiscal Liability (Remediation)"
+category = "fiscal"
+weight = 0.10
+description = """
+Historical precedent: sulfide mines frequently require perpetual water treatment
+post-closure. If bond is insufficient or company dissolves, public bears remediation costs.
+"""
+local_bearer = "Minnesota taxpayers; federal government (if on federal land)"
+time_horizon = "post-closure, potentially permanent"
+reversibility = "very low"
+
+[[exposures]]
+id = "noise_vibration"
+label = "Noise and Ground Vibration"
+category = "quality_of_life"
+weight = 0.05
+description = """
+Blasting, heavy equipment, and processing operations generate sustained noise and
+ground vibration. Wilderness adjacency amplifies sensitivity of affected communities.
+"""
+local_bearer = "Residents and visitors within operational zone"
+time_horizon = "operational"
+reversibility = "high post-closure"

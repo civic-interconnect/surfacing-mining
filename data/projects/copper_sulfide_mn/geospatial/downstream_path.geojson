@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "_comment": "PLACEHOLDER - Draft geometry. Replace with actual NHD flowline trace from site outlet downstream.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "downstream_path_north",
+        "label": "Downstream Path - North Drainage (Vermilion River → Rainy River)",
+        "direction": "north",
+        "drainage_basin": "Hudson Bay",
+        "start": "Mine site vicinity",
+        "end": "Vermilion River confluence (placeholder)",
+        "status": "draft",
+        "notes": "Illustrative trace for north-draining scenario. Verify with actual NHD flowline data."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-91.8900, 47.8200],
+          [-91.8800, 47.8600],
+          [-91.8600, 47.9000],
+          [-91.8200, 47.9400],
+          [-91.7800, 47.9800],
+          [-91.7200, 48.0200],
+          [-91.6500, 48.0800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "downstream_path_south",
+        "label": "Downstream Path - South Drainage (St. Louis River → Lake Superior)",
+        "direction": "south",
+        "drainage_basin": "Lake Superior / St. Lawrence",
+        "start": "Mine site vicinity",
+        "end": "St. Louis River (placeholder)",
+        "status": "draft",
+        "notes": "Illustrative trace for south-draining scenario. Verify with actual NHD flowline data."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-91.8900, 47.8200],
+          [-91.9200, 47.7800],
+          [-91.9500, 47.7200],
+          [-92.0000, 47.6600],
+          [-92.1000, 47.5800],
+          [-92.1500, 47.5000]
+        ]
+      }
+    }
+  ]
+}

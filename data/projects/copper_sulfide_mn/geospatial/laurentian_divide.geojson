@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "laurentian_divide",
+        "label": "Laurentian Divide",
+        "description": "Continental drainage divide separating Hudson Bay basin (north) from Lake Superior / St. Lawrence basin (south). Follows the Giants Range ridge through NE Minnesota.",
+        "significance": "Any site north of this line drains to the Rainy River and Hudson Bay. Any site south drains to Lake Superior via the St. Louis River. Sites near Babbitt and Ely may straddle or sit close to this divide.",
+        "source": "U.S. Geological Survey Geographic Names Information System (GNIS), Feature ID 661691. Public domain.",
+        "gnis_feature_id": "661691",
+        "gnis_class": "Ridge",
+        "coordinates_note": "8 surveyed points, ordered west to east. Derived from USGS 1:24,000-scale topographic maps.",
+        "status": "authoritative"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-92.9399088, 47.4796534],
+          [-92.8054601, 47.5202066],
+          [-92.6865702, 47.5407603],
+          [-92.5707366, 47.5702032],
+          [-92.5121281, 47.4857603],
+          [-92.4774054, 47.4932599],
+          [-92.4296257, 47.5182592],
+          [-92.3329532, 47.6035355]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "laurentian_divide_marker",
+        "label": "Laurentian Divide — GNIS Named Point",
+        "description": "Primary GNIS named point for Laurentian Divide (Virginia quad). Elevation 559m / 1834ft. Located on the Giants Range in St. Louis County.",
+        "source": "USGS GNIS Feature ID 661691",
+        "elevation_m": 559,
+        "elevation_ft": 1834,
+        "quad_map": "Virginia",
+        "status": "authoritative"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-92.5707366, 47.5702032]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "hill_of_three_waters_vicinity",
+        "label": "Hill of Three Waters Vicinity (Hibbing area)",
+        "description": "Near Hibbing, MN. Triple divide point where Mississippi, Nelson (Hudson Bay), and St. Lawrence watersheds meet. The westernmost surveyed GNIS point for the Laurentian Divide.",
+        "source": "USGS GNIS Feature ID 661691, Hibbing quad",
+        "status": "authoritative"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-92.9399088, 47.4796534]
+      }
+    }
+  ]
+}
