@@ -79,6 +79,9 @@ jobs:
           fi
           uv run zensical build
 
+      - name: D1b) Copy data directory into built site
+        run: cp -r data site/data
+
       - name: D2) Verify site output exists
         # WHY: Zensical should create a static site in the configured output directory
         # (commonly "site/"). If the directory does not exist, the documentation

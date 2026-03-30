@@ -6,7 +6,7 @@
 # It is used in this project to streamline documentation and provide better support for docstring generation.
 
 [project]
-site_name = "Explorer: Data Centers"
+site_name = "Surfacing Mining"
 site_url = "https://civic-interconnect.github.io/surfacing-mining/"
 repo_url = "https://github.com/civic-interconnect/surfacing-mining"
 repo_name = "civic-interconnect/surfacing-mining"
