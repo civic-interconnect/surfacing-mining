@@ -74,14 +74,8 @@ jobs:
       # ============================================================
       # === DEPLOY: Build only, don't deploy yet ===
       # ============================================================
-      - name: D1) Export results JSON for Explorer
-        run: |
-          uv run python -m surfacing-mining.cli \
-            --candidates data/raw/example_candidates.csv \
-            --policy data/raw/example_policy.toml \
-            --output-json docs/data/results.json
 
-      - name: D2) Build docs with Zensical
+      - name: D1) Build docs with Zensical
         run: |
           if [ -f "zensical.toml" ]; then
             uv run zensical build
