@@ -28,11 +28,11 @@ requires multiple wells spread across a lease area.
 | Royalty / tax framework | Established (taconite net proceeds tax) | Uncertain (no MN helium precedent; mineral rights and royalty statute unclear) |
 | Strategic framing | Copper supply chain | Critical mineral / national security |
 
-¹ AMD (Acid Mine Drainage) is the process where sulfide minerals exposed during mining 
-oxidize and produce sulfuric acid, which leaches heavy metals into water. 
+¹ AMD (Acid Mine Drainage) is the process where sulfide minerals exposed during mining
+oxidize and produce sulfuric acid, which leaches heavy metals into water.
 
-² Helium is often extracted alongside natural gas. 
-If the gas-to-helium ratio makes gas processing uneconomical, 
+² Helium is often extracted alongside natural gas.
+If the gas-to-helium ratio makes gas processing uneconomical,
 the associated gas gets flared rather than captured, releasing CO₂ and methane.
 
 ## Key structural tensions
